@@ -6,8 +6,8 @@ public class Entry
     public string _entryText;
      public void Display()
     {
-        // Display the entry in a formatted way
+        // Display the entry in a formatted way using "||" as a separator
 
-        Console.WriteLine($"{_date} | {_promptText}: {_entryText}");
+        Console.WriteLine($"{_date} || {_promptText} || {_entryText}");
     }
 }

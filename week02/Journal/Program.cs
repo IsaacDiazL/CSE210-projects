@@ -7,6 +7,7 @@ using System.IO;
 // 1. Added color text to the console output for better visibility.
 // 2. displayed an error message if the file does not exist when loading entries.
 // 3. added a txt file extension when saving and loading entries by default.
+// 4. Implemented an error message if the user enters an invalid option in the menu.
 class Program
 {
     static void Main(string[] args)
@@ -75,6 +76,14 @@ class Program
                 string fileName = Console.ReadLine();
                 // Ensure the file name is a txt file
                 journal.LoadFromFile(fileName + ".txt");
+            }
+            // If user enters an invalid option, display an error message
+            else if (menuOption > 5)
+            {
+                // Exit the program
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Please enter a valid option (1-5).");
+                Console.ResetColor();
             }
         }
     }

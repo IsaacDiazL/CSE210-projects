@@ -21,15 +21,20 @@ class Video
         _comments.Add(comments);
 
     }
+    public int CommentsLength()
+    {
+        int numberComments = _comments.Count;
+        return numberComments;
+    }
     public void ShowDisplay()
     {
         Console.WriteLine("Title: " + _title);
         Console.WriteLine("Author: " + _author);
         Console.WriteLine("Length: " + _length);
-        Console.WriteLine("Comments:");
+        Console.WriteLine($"Number of comments: {CommentsLength()}");
         foreach (var line in _comments)
         {
-            Console.WriteLine($"{line.GetAuthor()}: {line.GetComment()}");
+            Console.WriteLine($"--- {line.GetAuthor()}: {line.GetComment()}");
         }
         Console.WriteLine();
     }

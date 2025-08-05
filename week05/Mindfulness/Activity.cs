@@ -3,7 +3,7 @@ class Activity
     protected string _name;
     protected string _description;
     protected int _duration;
-    public List<string> spinner = new List<string>();
+    protected List<string> spinner = new List<string>();
     public Activity()
     {
         _name = "Reflecting";
@@ -49,10 +49,11 @@ class Activity
     }
     public void ShowCountDown(int countdown = 5)
     {
+        Console.WriteLine();
         for (int i = countdown; i > 0; i--)
         {
             Console.Write("\r{0:00}", i);
-            System.Threading.Thread.Sleep(1000); // espera 1 segundo
+            System.Threading.Thread.Sleep(1000); 
         }
         Console.WriteLine();
     }

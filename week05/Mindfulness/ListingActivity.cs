@@ -37,7 +37,7 @@ class ListingActivity : Activity
         count = 10;
         Console.WriteLine("List as many responses as you can to the following prompt:");
         GetRandomPrompt();
-        Console.WriteLine("You may begin in: ");
+        Console.Write("You may begin in:");
         ShowCountDown(count);
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(_duration);

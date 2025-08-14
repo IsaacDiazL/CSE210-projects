@@ -12,7 +12,7 @@ class Program
         activities.Add(running);
         activities.Add(cycling);
         activities.Add(swimming);
-
+        Console.Clear();
         foreach (Activity activity in activities)
         {
             Console.WriteLine(activity.GetSummary());
